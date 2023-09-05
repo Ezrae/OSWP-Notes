@@ -42,6 +42,7 @@ May need -K
 # Evil Twin with hostapd-mana
 Wiki: https://github.com/sensepost/hostapd-mana/wiki
 
+## PSK
 ```
 interface=wlan0
 ssid=groupB_target_3
