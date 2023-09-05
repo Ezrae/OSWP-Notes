@@ -1,5 +1,9 @@
 # Useful Wireshark Filter
+0x08 means beacons
 ```wlan.fc.type_subtype == 0x08 && wlan.ssid == "<targetname>" ```
+
+filter on bssid
+```wlan.bssid == <bssid>```
 
 # Capturing handshakes  
 
