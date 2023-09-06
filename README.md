@@ -133,5 +133,7 @@ Extract hashes:
 ```grep <JTR/HASHCAT> | cut -f2 >> <hashfile>```
 
 Hashcat and John syntax
-```sudo hashcat -m 5500 <hashfile> <wordlist> 
-john --format=netntlm <hashfile> --wordlist=<wordlist>```
+```
+sudo hashcat -m 5500 <hashfile> <wordlist> 
+john --format=netntlm <hashfile> --wordlist=<wordlist>
+```
