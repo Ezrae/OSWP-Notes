@@ -26,6 +26,8 @@ Then deauth from another shell or wifi card:
 
 # Cracking handshakes
 
+Default wordlists in Kali:  https://www.kali.org/tools/wordlists/
+
 ## Aircrack-ng
 ```aircrack-ng -w <path to wordlist> -e <ESSID> -b <BSSID> <capture filename>```
 
