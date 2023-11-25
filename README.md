@@ -150,9 +150,9 @@ network={
   key_mgmt=WPA-PSK
 }
 ```
-Then to connect: 
+Then to connect (use the -B after verifying the connection is successful)
 ```
-sudo wpa_supplicant -i <interface> -c <config file> -B # -B for backgrounding, make sure it connects before using this
+sudo wpa_supplicant -i <interface> -c <config file> -B 
 sudo dhclient <interface>
 ```
 
