@@ -138,6 +138,24 @@ sudo hashcat -m 5500 <hashfile> <wordlist>
 john --format=netntlm <hashfile> --wordlist=<wordlist>
 ```
 
+# Connecting to target network
+
+wifi supplicant config file:
+
+```
+network={
+  ssid="<ssid>"
+  scan_ssid=1
+  psk="<password>"
+  key_mgmt=WPA-PSK
+}
+```
+Then to connect: 
+```
+sudo wpa_supplicant -i <interface> -c <config file> -B # -B for backgrounding, make sure it connects before using this
+sudo dhclient <interface>
+```
+
 # Captive Portals
 ```
 sudo apt install apache2 libapache2-mod-php
