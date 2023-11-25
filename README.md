@@ -127,7 +127,7 @@ mana_eapsuccess=1
 mana_eaptls=1
 ```
 
-Start evil twin with command:
+Start evil twin with command
 ```
 sudo hostapd-mana <configfile>
 ```
