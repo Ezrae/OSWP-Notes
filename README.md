@@ -150,13 +150,29 @@ john --format=netntlm <hashfile> --wordlist=<wordlist>
 # Connecting to target network
 
 wifi supplicant config file:
-
+PSK
 ```
 network={
   ssid="<ssid>"
   scan_ssid=1
   psk="<password>"
   key_mgmt=WPA-PSK
+}
+```
+EAP
+```
+network={ 
+      ssid="TEST-EAP" 
+      priority=1 
+      proto=RSN 
+      key_mgmt=WPA-EAP 
+      pairwise=CCMP 
+      auth_alg=OPEN 
+      eap=PEAP 
+      identity="user1" 
+      password="ThisPa$$wordIsExtraSecureBecauseItIsSuperLONG!@#" 
+      phase1="peaplabel=0" 
+      phase2="auth=MSCHAPV2" 
 }
 ```
 Then to connect (use the -B after verifying the connection is successful)
