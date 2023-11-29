@@ -12,6 +12,8 @@ filter on bssid
 
 ## Starting monitor mode and setting a channel  
 ```sudo airmon-ng start wlan0 3  ```
+Check channel
+```iw <interface> info```
 
 ## Recon - see all  
 ```sudo airodump-ng wlan0mon```
