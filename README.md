@@ -189,7 +189,8 @@ create index.php from wget, copy needed files to /var/www/html/portal
 copy login_check.php to /var/www/html/portal
 
 set up network
-```sudo ip addr add 192.168.87.1/24 dev wlan0
+```
+sudo ip addr add 192.168.87.1/24 dev wlan0
 sudo ip link set wlan0 up
 sudo apt install dnsmasq
 ```
