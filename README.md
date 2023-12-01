@@ -238,7 +238,7 @@ Network setup
 sudo ip addr add 192.168.87.1/24 dev wlan0
 sudo ip link set wlan0 up
 sudo apt install dnsmasq
-mco-dnsmasq.conf
+# set up the mco-dnsmasq.conf file (tools folder)
 sudo dnsmasq --conf-file=mco-dnsmasq.conf
 sudo tail /var/log/syslog | grep dnsmasq
 sudo netstat -lnp
