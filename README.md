@@ -34,7 +34,7 @@ Default wordlists in Kali:  https://www.kali.org/tools/wordlists/
 ```aircrack-ng -w <path to wordlist> -e <ESSID> -b <BSSID> <capture filename>```
 
 Aircrack with john rules
-```sudo john --wordlist=<path to wordlist> --rules --stdout | aircrack-ng -e <ESSID> -b <BSSID> -w <capture filename>```
+```sudo john --wordlist=<path to wordlist> --rules --stdout | aircrack-ng -e <ESSID> -b <BSSID> -w - <capture filename>```
 
 # Cracking wps
 
