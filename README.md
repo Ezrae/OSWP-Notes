@@ -5,6 +5,9 @@
 filter on bssid
 ```wlan.bssid == <bssid>```
 
+# WEP Walkthrough
+https://charlesreid1.com/wiki/Aircrack/WEP_Cracking 
+
 # Capturing handshakes  
 
 ## Starting monitor mode  
