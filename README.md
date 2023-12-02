@@ -152,8 +152,18 @@ john --format=netntlm <hashfile> --wordlist=<wordlist>
 
 # Connecting to target network
 
-wifi supplicant config file:
-PSK
+wifi supplicant config file examples:
+
+WEP 
+```
+network={
+        ssid="<ssid>"
+        key_mgmt=NONE
+        wep_key0="<key>"  # 5 or 13 characters, or a hexkey starting with 0x
+        wep_tx_keyidx=0
+}
+```
+PSK 
 ```
 network={
   ssid="<ssid>"
@@ -165,15 +175,15 @@ network={
 EAP
 ```
 network={ 
-      ssid="TEST-EAP" 
+      ssid="<ssid>" 
       priority=1 
       proto=RSN 
       key_mgmt=WPA-EAP 
       pairwise=CCMP 
       auth_alg=OPEN 
       eap=PEAP 
-      identity="user1" 
-      password="ThisPa$$wordIsExtraSecureBecauseItIsSuperLONG!@#" 
+      identity="<user>" 
+      password="<pass>" 
       phase1="peaplabel=0" 
       phase2="auth=MSCHAPV2" 
 }
