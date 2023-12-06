@@ -160,7 +160,7 @@ WEP
 network={
         ssid="<ssid>"
         key_mgmt=NONE
-        wep_key0="<key>"  # 5 or 13 characters, or a hexkey starting with 0x
+        wep_key0=<key>  # do not use : in the key
         wep_tx_keyidx=0
 }
 ```
